@@ -1,0 +1,101 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.constraintlayout.widget.ConstraintLayout
+    xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent">
+
+    <TextView
+        android:id="@+id/details_name"
+        android:layout_width="@dimen/dim_0"
+        android:layout_height="wrap_content"
+        android:layout_marginStart="@dimen/dim_8"
+        android:layout_marginTop="@dimen/dim_8"
+        android:layout_marginEnd="@dimen/dim_8"
+        android:textColor="@color/colorPrimary"
+        android:textSize="@dimen/text_18"
+        android:textStyle="bold"
+        android:layout_margin="@dimen/dim_24"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent"
+        tools:text="Name of the place" />
+
+    <TextView
+        android:id="@+id/details_rating"
+        android:layout_width="@dimen/dim_0"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="@dimen/dim_8"
+        android:textSize="@dimen/text_13"
+        app:layout_constraintStart_toStartOf="@+id/details_name"
+        app:layout_constraintTop_toBottomOf="@+id/details_name"
+        tools:text="4.6" />
+
+    <RatingBar
+        android:id="@+id/details_rating_bar"
+        style="?android:attr/ratingBarStyleSmall"
+        android:layout_width="@dimen/dim_80"
+        android:layout_height="@dimen/dim_16"
+        android:layout_marginStart="@dimen/dim_8"
+        android:isIndicator="true"
+        android:numStars="5"
+        android:stepSize="0.1"
+        app:layout_constraintBottom_toBottomOf="@+id/details_rating"
+        app:layout_constraintStart_toEndOf="@+id/details_rating"
+        app:layout_constraintTop_toTopOf="@+id/details_rating"/>
+
+    <TextView
+        android:id="@+id/details_reviews"
+        android:layout_width="@dimen/dim_0"
+        android:layout_height="wrap_content"
+        android:layout_marginStart="@dimen/dim_8"
+        android:textSize="@dimen/text_13"
+        app:layout_constraintBottom_toBottomOf="@+id/details_rating"
+        app:layout_constraintStart_toEndOf="@id/details_rating_bar"
+        app:layout_constraintTop_toTopOf="@+id/details_rating"
+        tools:text="(416)" />
+
+    <TextView
+        android:id="@+id/details_category"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="@dimen/dim_8"
+        android:textSize="@dimen/text_13"
+        app:layout_constraintStart_toStartOf="@+id/details_rating"
+        app:layout_constraintTop_toBottomOf="@+id/details_rating"
+        tools:text="Mexican Restaurant" />
+
+    <TextView
+        android:id="@+id/details_address"
+        android:layout_width="@dimen/dim_0"
+        android:layout_height="wrap_content"
+        android:layout_marginStart="@dimen/dim_8"
+        android:layout_marginTop="@dimen/dim_24"
+        android:layout_margin="@dimen/dim_20"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/details_category"
+        tools:text="1600 7th Ave Ste 105 (Olive Way)" />
+
+    <TextView
+        android:id="@+id/details_hours"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        app:layout_constraintStart_toStartOf="parent"
+        android:layout_marginStart="@dimen/dim_20"
+        app:layout_constraintTop_toBottomOf="@+id/details_address"
+        tools:text="Open till 7pm" />
+
+    <TextView
+        android:id="@+id/details_phone"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:background="?selectableItemBackground"
+        android:gravity="center_vertical"
+        android:layout_margin="@dimen/dim_20"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/details_hours"
+        tools:text="(206) 529-8810"
+        tools:visibility="visible" />
+
+</androidx.constraintlayout.widget.ConstraintLayout>
